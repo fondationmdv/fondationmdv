@@ -22,27 +22,21 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Startup Web Demo"
     actions={[
       {
         variant: 'primary',
         target: '_blank',
-        text: 'Get templates',
-        href: 'https://github.com/onwidget/astrowind',
-        icon: 'tabler:download',
+        text: 'Contactez-nous!',
+        href: 'mailto:fondationmdv@hotmail.com',
+        icon: 'tabler:message-circle',
       },
-      { text: 'Learn more', href: '#features' },
     ]}
   >
-    <Fragment slot="title">
-      Improve <span class="hidden sm:inline">the online presence of</span> your <span
-        class="text-accent dark:text-white highlight">Startup</span
-      > with Astrowind templates
-    </Fragment>
+    <Fragment slot="title"> Soutenir les projets de MDV</Fragment>
 
     <Fragment slot="subtitle">
-      Step into the spotlight with <span class="font-semibold">Astrowind</span> templates, your pathway to fortifying your
-      startup's digital footprint, fostering credibility, and expanding your reach.
+      La Fondation Madeleine-de-Verchères est une OBNL qui a été créé lors de l'année scolaire 2014-2015 par un groupe
+      de parents bénévoles issus de l'Organisme de participation des parents (OPP).
     </Fragment>
 
     <Fragment slot="image">
@@ -59,8 +53,8 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="About us"
-    subtitle="We believe in the magic of turning dreams into stunning realities. Founded by passionate developers with a shared vision, we set out to simplify the website creation process. Our templates bring together the innovation of Astro 4.0 and the versatility of Tailwind CSS, enabling you to express your unique brand identity like never before."
+    title="A propos"
+    subtitle="La Fondation Madeleine-de-Verchères est une OBNL qui a été créé lors de l'année scolaire 2014-2015 par un groupe de parents bénévoles issus de l'Organisme de participation des parents (OPP). La mission de la Fondation est de soutenir le projet éducatif de l'école principalement par l'achat et la réparation de matériel lié au projet éducatif ou par le financement d'activités culturelles, sportives, artistiques ou éducatives. La Fondation est composée d'un conseil d'administration qui prend des décisions sur les campagnes de financement à mener et sur le choix des projets qui seront financés"
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -69,7 +63,7 @@ const metadata = {
 
   <!-- Stats Widget ****************** -->
 
-  <Stats
+  <!-- <Stats
     title="Discover the impressive impact of Astrowind"
     subtitle="The numbers below reflect the trust our users have placed in us and the remarkable outcomes we've helped them achieve."
     stats={[
@@ -78,11 +72,11 @@ const metadata = {
       { title: 'User Ratings', amount: '4.8' },
       { title: 'Satisfied Clients', amount: '116K' },
     ]}
-  />
+  /> -->
 
   <!-- Brands Widget ****************** -->
 
-  <Brands
+  <!-- <Brands
     title="Partnerships & Collaborations"
     subtitle="At Astrowind, we believe in the power of collaboration to drive innovation and create exceptional experiences."
     icons={[]}
@@ -125,18 +119,16 @@ const metadata = {
         alt: 'Yahoo',
       },
     ]}
-  />
+  /> -->
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="What services do we provide?"
-    subtitle="We offer a wide range of website templates that suit various industries and purposes such as business, portfolio, e-commerce, blog, etc."
+    title="Quelques projets financés"
     items={[
       {
-        title: 'Installation Instructions',
-        description:
-          'Offer clear instructions on how to download the purchased templates and install them on various website platforms or content management systems.',
+        title: 'Classes flexibles',
+        description: 'Investissement de 1150$',
         icon: 'flat-color-icons:document',
       },
       {
