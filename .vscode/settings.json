@@ -9,7 +9,8 @@
     "editor.defaultFormatter": "astro-build.astro-vscode"
   },
   "yaml.schemas": {
-    "./.vscode/astrowind/config-schema.json": "/src/config.yaml"
+    "./.vscode/astrowind/config-schema.json": "/src/config.yaml",
+    "https://json.schemastore.org/github-workflow.json": "/.github/workflows/deploy.yml"
   },
   "eslint.useFlatConfig": true
 }
