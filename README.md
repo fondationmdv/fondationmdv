@@ -11,4 +11,4 @@ pnpm dev
 
 ## Comment déployer?
 
-Ce repo est connecté à Netlify pour se déployer automatiquement sur [fondationmdv.ca](https://fondationmdv.ca)
+[GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow) est configuré pour déployer automatiquement sur [fondationmdv.ca](https://fondationmdv.ca) à chaque nouveau commit sur la branche `main`.
