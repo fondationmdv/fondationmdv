@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: julbrs/fondationmdv
+  name: git-gateway
   branch: main
 
 media_folder: 'src/assets/images'
