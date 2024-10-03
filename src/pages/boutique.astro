@@ -1,0 +1,24 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+
+const metadata = {
+  title: 'Boutique',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero>
+    <Fragment slot="title">Boutique</Fragment>
+    <Fragment slot="subtitle"> Vous pouvez soutenir les actions de la fondation avec vos achats! </Fragment>
+  </Hero>
+
+  <div style="position:relative;overflow:hidden;height:630px;width:100%;padding-top:630px;">
+    <iframe
+      title="Donation form powered by Zeffy"
+      style="position: absolute; border: 0; top:0;left:0;bottom:0;right:0;width:100%;height:100%"
+      src="https://www.zeffy.com/embed/ticketing/2585a3de-db12-4eeb-9857-23d18e5dfe34"
+      allow="payment"
+      allowtransparency="true"></iframe>
+  </div>
+</Layout>
