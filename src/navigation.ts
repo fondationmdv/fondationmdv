@@ -11,7 +11,7 @@ export const headerData = {
       href: getPermalink('/don'),
     },
     {
-      text: 'Boutique',
+      text: 'Vente de sapins!',
       href: getPermalink('/boutique'),
     },
 
