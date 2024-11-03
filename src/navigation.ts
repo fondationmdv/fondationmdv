@@ -6,6 +6,14 @@ export const headerData = {
       text: 'Accueil',
       href: getPermalink('/'),
     },
+    {
+      text: 'Don',
+      href: getPermalink('/don'),
+    },
+    {
+      text: 'Vente de sapins!',
+      href: getPermalink('/boutique'),
+    },
 
     // {
     //   text: 'A propos',
@@ -121,18 +129,18 @@ export const headerData = {
 
 export const footerData = {
   links: [
-    // {
-    //   title: 'Product',
-    //   links: [
-    //     { text: 'Features', href: '#' },
-    //     { text: 'Security', href: '#' },
-    //     { text: 'Team', href: '#' },
-    //     { text: 'Enterprise', href: '#' },
-    //     { text: 'Customer stories', href: '#' },
-    //     { text: 'Pricing', href: '#' },
-    //     { text: 'Resources', href: '#' },
-    //   ],
-    // },
+    {
+      title: 'Produits',
+      links: [
+        { text: 'Boutique', href: getPermalink('/boutique') },
+        // { text: 'Security', href: '#' },
+        // { text: 'Team', href: '#' },
+        // { text: 'Enterprise', href: '#' },
+        // { text: 'Customer stories', href: '#' },
+        // { text: 'Pricing', href: '#' },
+        // { text: 'Resources', href: '#' },
+      ],
+    },
     // {
     //   title: 'Platform',
     //   links: [
