@@ -17,6 +17,7 @@ const metadata = {
   // title: 'Index',
   ignoreTitleTemplate: true,
 };
+
 ---
 
 <Layout metadata={metadata}>
@@ -33,11 +34,13 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="title">Bienvenue sur le site de la fondation MDV</Fragment>
+    <Fragment slot="title">
+      <h1 style="font-size:3em; font-weight:bold">Bienvenue sur le site de la Fondation MDV</h1><br>
+    </Fragment>
 
     <Fragment slot="subtitle">
-      La Fondation Madeleine-de-Verchères est une OBNL qui a été créé lors de l'année scolaire 2014-2015 par un groupe de parents bénévoles issus de l'Organisme de participation des parents (OPP).
-      La mission de la Fondation est de soutenir le projet éducatif de l'école principalement par l'achat et la réparation de matériel lié au projet éducatif ou par le financement d'activités culturelles, sportives, artistiques ou éducatives.
+      La Fondation Madeleine-de-Verchères est une OBNL qui a été créée lors de l'année scolaire 2014-2015 par un groupe de parents bénévoles issus de l'Organisme de participation des parents (OPP).<br><br>
+      Sa mission est de soutenir le projet éducatif de l'école principalement par l'achat et la réparation de matériel ou par le financement d'activités culturelles, sportives, artistiques ou éducatives.<br><br>
       La Fondation est composée d'un conseil d'administration qui prend des décisions sur les campagnes de financement à mener et sur le choix des projets qui seront financés
     </Fragment>
 
