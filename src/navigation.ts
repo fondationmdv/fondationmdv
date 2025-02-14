@@ -14,12 +14,12 @@ export const headerData = {
     //   text: 'Photos',
     //   href: getPermalink('/gallerie'),
     // },
-    {
-      text: 'Documents',
-      href: getPermalink('/docs'),
-    },
     // {
-    //   text: 'Vente de sapins!',
+    //   text: 'Documents',
+    //   href: getPermalink('/docs'),
+    // },
+    // {
+    //   text: 'Vente de café!',
     //   href: getPermalink('/boutique'),
     // },
 
