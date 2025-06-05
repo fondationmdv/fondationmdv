@@ -1,3 +1,4 @@
+import { styleText } from 'node:util';
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
@@ -18,11 +19,14 @@ export const headerData = {
     //   text: 'Documents',
     //   href: getPermalink('/docs'),
     // },
+    // {
+    //   text: 'Vente de café!',
+    //   href: getPermalink('/boutique'),
+    // },
     {
-      text: 'Vente de café!',
-      href: getPermalink('/boutique'),
+      text: 'À propos',
+      href: getPermalink('/apropos'),
     },
-
   ],
 };
 
