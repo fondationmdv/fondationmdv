@@ -23,6 +23,10 @@ export const headerData = {
     //   text: 'Documents',
     //   href: getPermalink('/docs'),
     // },
+    {
+      text: 'À propos',
+      href: getPermalink('/apropos'),
+    },
   ],
 };
 

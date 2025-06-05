@@ -7,6 +7,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Features from '~/components/widgets/Features.astro';
 import Stats from '~/components/widgets/Stats.astro';
+import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
@@ -35,13 +36,12 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      <h1 style="font-size:3em; font-weight:bold">Bienvenue sur le site de la Fondation MDV</h1><br>
+      <h1 style="font-size:1.5em; font-weight:bold">Bienvenue sur le site officiel de la Fondation de l'école Madeleine-De-Verchères!</h1><br>
     </Fragment>
 
     <Fragment slot="subtitle">
-      La Fondation Madeleine-de-Verchères est une OBNL qui a été créée lors de l'année scolaire 2014-2015 par un groupe de parents bénévoles issus de l'Organisme de participation des parents (OPP).<br><br>
-      Sa mission est de soutenir le projet éducatif de l'école principalement par l'achat et la réparation de matériel ou par le financement d'activités culturelles, sportives, artistiques ou éducatives.<br><br>
-      La Fondation est composée d'un conseil d'administration qui prend des décisions sur les campagnes de financement à mener et sur le choix des projets qui seront financés
+    Notre mission est de <u>soutenir les projets éducatifs et communautaires</u> qui enrichissent la vie scolaire des élèves.<br>
+    Découvrez nos actions, contribuez à nos projets, ou impliquez-vous dès aujourd’hui!
     </Fragment>
 
     <!-- <Fragment slot="image">
@@ -55,29 +55,54 @@ const metadata = {
     </Fragment> -->
   </Hero>
 
-  <!-- Features2 Widget ************** -->
+  <!-- Stats Widget ****************** -->
 
-  <!-- <Features2
-    title="A propos"
-    subtitle="La Fondation Madeleine-de-Verchères est une OBNL qui a été créé lors de l'année scolaire 2014-2015 par un groupe de parents bénévoles issus de l'Organisme de participation des parents (OPP). La mission de la Fondation est de soutenir le projet éducatif de l'école principalement par l'achat et la réparation de matériel lié au projet éducatif ou par le financement d'activités culturelles, sportives, artistiques ou éducatives. La Fondation est composée d'un conseil d'administration qui prend des décisions sur les campagnes de financement à mener et sur le choix des projets qui seront financés"
+  <Stats
+    title="Depuis 2020, la Fondation MDV c'est:"
+    stats={[
+      { title: 'Montant collecté', amount: '25K' },
+      { title: 'Montant investi', amount: '22K' },
+      { title: 'Projets proposés', amount: '50' },
+      { title: 'Projets acceptés', amount: '40' },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Projet 1',
+        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
+      },
+      {
+        title: 'Projet 2',
+        description:
+          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
+      },
+      {
+        title: 'Projet 3',
+        description:
+          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
+      },
+      {
+        title: 'Projet 4',
+        description:
+          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
+      alt: 'Blueprint Image',
+    }}
   >
+    <Fragment slot="content"><u>En 2025 c'est 5000$ récoltés et 12 projets financés!</u><br>Vous pouvez trouver le détail <a href="url">ici</a>, mais voici quelques exemples:</Fragment>
+
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Features2> -->
-
-  <!-- Stats Widget ****************** -->
-
-  <!-- <Stats
-    title="Discover the impressive impact of Astrowind"
-    subtitle="The numbers below reflect the trust our users have placed in us and the remarkable outcomes we've helped them achieve."
-    stats={[
-      { title: 'Downloads', amount: '182K' },
-      { title: 'Websites Launched', amount: '87' },
-      { title: 'User Ratings', amount: '4.8' },
-      { title: 'Satisfied Clients', amount: '116K' },
-    ]}
-  /> -->
+  </Content>
 
   <!-- Brands Widget ****************** -->
 
