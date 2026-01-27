@@ -19,7 +19,7 @@ export const headerData = {
     //   href: getPermalink('/docs'),
     // },
     {
-      text: 'Vente de sapins!',
+      text: 'Vente de café',
       href: getPermalink('/boutique'),
     },
 
