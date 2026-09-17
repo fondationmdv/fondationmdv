@@ -29,9 +29,9 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      <h1 style="font-size:1.5em; font-weight:bold">
-        Bienvenue sur le site officiel de la Fondation de l'école Madeleine-De-Verchères!
-      </h1><br />
+      <span style="font-size:24px; font-weight:bold; letter-spacing:normal"
+        >Bienvenue sur le site officiel de la Fondation de l'école Madeleine-De-Verchères!</span
+      >
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -39,22 +39,16 @@ const metadata = {
       />
       Découvrez nos actions, contribuez à nos projets, ou impliquez-vous dès aujourd’hui!
     </Fragment>
-
-    <!-- <Fragment slot="image">
-      <YouTube id="bdGL9HLHbB8" title="La Face Brillante de la Lune - MDV 2019 (Comfortably Numb)" />
-      <style is:inline>
-        lite-youtube {
-          margin: 0 auto;
-          max-width: 100%;
-        }
-      </style>
-    </Fragment> -->
   </Hero>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
     title="Depuis 2020, la Fondation MDV c'est:"
+    classes={{
+      container: 'pt-0 pb-12 md:pt-0 md:pb-16 lg:pt-0 lg:pb-20 -mt-10 md:-mt-16',
+      headline: { title: 'text-[24px]' },
+    }}
     stats={[
       { title: 'Montant collecté', amount: '25K' },
       { title: 'Montant investi', amount: '22K' },

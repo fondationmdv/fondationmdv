@@ -11,9 +11,9 @@ export const headerData = {
       href: getPermalink('/don'),
     },
     // {
-    //   text: 'Vente de sapins!',
-    //   href: getPermalink('/boutique'),
-    // },
+    //     //   text: 'Vente de sapins!',
+    //     //   href: getPermalink('/boutique'),
+    //     // },
     // {
     //   text: 'Photos',
     //   href: getPermalink('/gallerie'),

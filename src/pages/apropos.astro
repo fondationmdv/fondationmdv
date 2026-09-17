@@ -11,13 +11,7 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    tagline="À propos de nous"
-    image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
-    }}
-  >
+  <Hero tagline="À propos de nous">
     <Fragment slot="content">
       La fondation Madeleine-de-Verchères est <u>un organisme à but non lucratif</u> créé en février 2015 par des parents
       bénévoles de l’OPP de l'école Madeleine-de-Verchères(Organisme de participation des parents).
@@ -31,57 +25,26 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Voici l'équipe!"
+    title="L'équipe derrière la fondation!"
+    classes={{ container: 'pt-0 pb-12 md:pt-0 md:pb-16 lg:pt-0 lg:pb-20 -mt-2 md:-mt-4' }}
     items={[
       {
-        title: 'Valérian',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
+        title: 'Catherine',
+        description:
+          "Donnez-lui du chaos, et elle vous ressort un plan d'action nickel avant la pause café. Leadership, organisation et collaboration, Catherine est d'une efficacité redoutable!",
         icon: 'flat-color-icons:template',
       },
       {
-        title: 'Heros',
+        title: 'Mathieu',
         description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
+          "Demandez-lui une idée, il vous en donnera dix de plus, gratuitement. Le cerveau qui ne s'arrête jamais, une vraie machine.",
         icon: 'flat-color-icons:gallery',
       },
       {
-        title: 'Features',
+        title: 'Valérian',
         description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
+          "Parle couramment le Java, boit trop de café, est connecté même la nuit. Si le site ne fonctionne plus, c'est qu'il s'est endormi...",
         icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
       },
     ]}
   >
