@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -10,10 +10,10 @@ export const headerData = {
       text: 'Don',
       href: getPermalink('/don'),
     },
-    {
-      text: 'Vente de sapins!',
-      href: getPermalink('/boutique'),
-    },
+    // {
+    //   text: 'Vente de sapins!',
+    //   href: getPermalink('/boutique'),
+    // },
 
     // {
     //   text: 'A propos',
