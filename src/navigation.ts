@@ -14,7 +14,6 @@ export const headerData = {
     //   text: 'Vente de sapins!',
     //   href: getPermalink('/boutique'),
     // },
-
     // {
     //   text: 'Photos',
     //   href: getPermalink('/gallerie'),
