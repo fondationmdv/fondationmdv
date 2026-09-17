@@ -3,11 +3,10 @@ import { fileURLToPath } from 'url';
 
 import { defineConfig } from 'astro/config';
 
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
 import icon from 'astro-icon';
-import compress from 'astro-compress';
 import type { AstroIntegration } from 'astro';
 
 import astrowind from './vendor/integration';
@@ -24,9 +23,6 @@ export default defineConfig({
   output: 'static',
 
   integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
     mdx(),
     icon({
       include: {
@@ -51,19 +47,6 @@ export default defineConfig({
       })
     ),
 
-    compress({
-      CSS: true,
-      HTML: {
-        'html-minifier-terser': {
-          removeAttributeQuotes: false,
-        },
-      },
-      Image: false,
-      JavaScript: true,
-      SVG: false,
-      Logger: 1,
-    }),
-
     astrowind({
       config: './src/config.yaml',
     }),
@@ -79,6 +62,7 @@ export default defineConfig({
   },
 
   vite: {
+    plugins: [tailwindcss()],
     resolve: {
       alias: {
         '~': path.resolve(__dirname, './src'),

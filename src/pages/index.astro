@@ -5,20 +5,13 @@ import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 import Features2 from '~/components/widgets/Features2.astro';
-import Features from '~/components/widgets/Features.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Content from '~/components/widgets/Content.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Brands from '~/components/widgets/Brands.astro';
-
-import { YouTube } from 'astro-embed';
 
 const metadata = {
   // title: 'Index',
   ignoreTitleTemplate: true,
 };
-
 ---
 
 <Layout metadata={metadata}>
@@ -36,12 +29,15 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      <h1 style="font-size:1.5em; font-weight:bold">Bienvenue sur le site officiel de la Fondation de l'école Madeleine-De-Verchères!</h1><br>
+      <h1 style="font-size:1.5em; font-weight:bold">
+        Bienvenue sur le site officiel de la Fondation de l'école Madeleine-De-Verchères!
+      </h1><br />
     </Fragment>
 
     <Fragment slot="subtitle">
-    Notre mission est de <u>soutenir les projets éducatifs et communautaires</u> qui enrichissent la vie scolaire des élèves.<br>
-    Découvrez nos actions, contribuez à nos projets, ou impliquez-vous dès aujourd’hui!
+      Notre mission est de <u>soutenir les projets éducatifs et communautaires</u> qui enrichissent la vie scolaire des élèves.<br
+      />
+      Découvrez nos actions, contribuez à nos projets, ou impliquez-vous dès aujourd’hui!
     </Fragment>
 
     <!-- <Fragment slot="image">
@@ -97,7 +93,11 @@ const metadata = {
       alt: 'Blueprint Image',
     }}
   >
-    <Fragment slot="content"><u>En 2025 c'est 5000$ récoltés et 12 projets financés!</u><br>Vous pouvez trouver le détail <a href="url">ici</a>, mais voici quelques exemples:</Fragment>
+    <Fragment slot="content"
+      ><u>En 2025 c'est 5000$ récoltés et 12 projets financés!</u><br />Vous pouvez trouver le détail <a href="url"
+        >ici</a
+      >, mais voici quelques exemples:</Fragment
+    >
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>

@@ -1,6 +1,19 @@
 import { getImage } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
-import type { OpenGraph } from '@astrolib/seo';
+
+export interface OpenGraphImage {
+  url: string;
+  width?: number;
+  height?: number;
+}
+
+export interface OpenGraph {
+  url?: string;
+  type?: string;
+  locale?: string;
+  site_name?: string;
+  images?: OpenGraphImage[];
+}
 
 const load = async function () {
   let images: Record<string, () => Promise<unknown>> | undefined = undefined;
