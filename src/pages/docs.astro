@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import LatestDocuments from '~/components/widgets/LatestDocuments.astro';
 
 const metadata = {
   title: 'Documents',
@@ -8,21 +9,77 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <Hero
-    actions={[
-      // {
-      //   variant: 'primary',
-      //   text: 'Automne 2024',
-      //   href: '/documents/ProjetsMDV_Automne2024 - Feuille 1.pdf',
-      //   target: '_blank',
-      //   icon: 'tabler:download',
-      // }
-    ]}
-  >
+  <Hero>
     <Fragment slot="title">Documents divers</Fragment>
     <Fragment slot="subtitle">
       Vous trouverez ici divers documents de la Fondation, comme les bilans des campagnes et des projets financés.
       N'hésitez pas à les consulter!</Fragment
     >
   </Hero>
+
+  <LatestDocuments
+    year="2026"
+    classes={{ container: 'pt-0 pb-12 md:pt-0 md:pb-16 lg:pt-0 lg:pb-20 -mt-12 md:-mt-20' }}
+    documents={[
+      {
+        date: '15 mars 2026',
+        name: 'Bilan financier - Hiver 2026',
+        href: '/documents/exemple-bilan-hiver-2026.pdf',
+      },
+      {
+        date: '2 février 2026',
+        name: 'Rapport des projets financés',
+        href: '/documents/exemple-rapport-projets-2026.pdf',
+      },
+    ]}
+  />
+
+  <LatestDocuments
+    year="2025"
+    classes={{
+      container:
+        'pt-6 pb-12 md:pt-8 md:pb-16 lg:pt-8 lg:pb-20 -mt-2 md:-mt-4 border-t border-gray-200 dark:border-slate-700',
+    }}
+    documents={[
+      {
+        date: '20 décembre 2025',
+        name: 'Bilan financier - Automne 2025',
+        href: '/documents/exemple-bilan-automne-2025.pdf',
+      },
+      {
+        date: '18 septembre 2025',
+        name: 'Bilan de la campagne de café',
+        href: '/documents/exemple-bilan-cafe-2025.pdf',
+      },
+      {
+        date: '5 mai 2025',
+        name: 'Bilan financier - Printemps 2025',
+        href: '/documents/exemple-bilan-printemps-2025.pdf',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </LatestDocuments>
+
+  <LatestDocuments
+    year="2024"
+    classes={{
+      container:
+        'pt-6 pb-12 md:pt-8 md:pb-16 lg:pt-8 lg:pb-20 -mt-2 md:-mt-4 border-t border-gray-200 dark:border-slate-700',
+    }}
+    documents={[
+      {
+        date: '12 décembre 2024',
+        name: 'Bilan financier - Automne 2024',
+        href: '/documents/exemple-bilan-automne-2024.pdf',
+      },
+      {
+        date: '8 avril 2024',
+        name: 'Rapport annuel des projets',
+        href: '/documents/exemple-rapport-annuel-2024.pdf',
+      },
+    ]}
+  />
 </Layout>

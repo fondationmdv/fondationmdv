@@ -1,0 +1,54 @@
+---
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/ui/Headline.astro';
+import { Icon } from 'astro-icon/components';
+import type { Widget } from '~/types';
+
+export interface DocumentItem {
+  date: string;
+  name: string;
+  href: string;
+}
+
+export interface Props extends Widget {
+  year: string;
+  documents?: Array<DocumentItem>;
+}
+
+const {
+  year,
+  documents = [],
+
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+  <Headline
+    tagline={year}
+    title="Derniers documents"
+    classes={{ container: 'max-w-none text-left mb-4 md:mb-6', title: 'text-2xl md:text-3xl' }}
+  />
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    {
+      documents.map(({ date, name, href }) => (
+        <div class="flex flex-col rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur border border-[#ffffff29] bg-white dark:bg-slate-900 p-5">
+          <span class="text-xs text-muted dark:text-slate-400 uppercase tracking-wide mb-1">{date}</span>
+          <h3 class="text-base font-bold mb-3">{name}</h3>
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-auto inline-flex items-center text-primary hover:underline"
+          >
+            Ouvrir le document
+            <Icon name="tabler:external-link" class="w-4 h-4 ml-1" />
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</WidgetWrapper>
