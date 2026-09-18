@@ -65,17 +65,16 @@ const postCollection = defineCollection({
   }),
 });
 
-const albums = defineCollection({
-  loader: glob({ pattern: '**/[^_]*.{yaml,yml,json}', base: './src/content/albums' }),
-  schema: ({ image }) =>
-    z.object({
-      title: z.string(),
-      description: z.string().optional(),
-      cover: image(),
-    }),
+const photos = defineCollection({
+  loader: glob({ pattern: '**/[^_]*.{yaml,yml,json}', base: './src/content/photos' }),
+  schema: z.object({
+    year: z.string(),
+    src: z.string(),
+    alt: z.string(),
+  }),
 });
 
 export const collections = {
   post: postCollection,
-  albums,
+  photos,
 };

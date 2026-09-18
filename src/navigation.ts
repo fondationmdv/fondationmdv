@@ -16,7 +16,7 @@ export const headerData = {
     //     // },
     // {
     //   text: 'Photos',
-    //   href: getPermalink('/gallerie'),
+    //   href: getPermalink('/galerie'),
     // },
     // {
     //   text: 'Documents',

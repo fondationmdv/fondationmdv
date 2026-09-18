@@ -1,0 +1,56 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import PhotoGallery from '~/components/widgets/PhotoGallery.astro';
+import { getCollection } from 'astro:content';
+
+const PHOTOS_PER_YEAR = 10;
+
+const allPhotos = await getCollection('photos');
+
+const photosByYear = allPhotos.reduce<Record<string, Array<{ src: string; alt: string }>>>((acc, { data }) => {
+  (acc[data.year] ??= []).push({ src: data.src, alt: data.alt });
+  return acc;
+}, {});
+
+const years = Object.keys(photosByYear).sort((a, b) => b.localeCompare(a));
+
+const metadata = {
+  title: 'Galerie',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero>
+    <Fragment slot="title">Galerie photos</Fragment>
+    <Fragment slot="subtitle">Quelques souvenirs des activités et projets de la Fondation, année par année.</Fragment>
+  </Hero>
+
+  {
+    years.map((year, index) => {
+      const photos = photosByYear[year];
+      const viewAllHref = photos.length > PHOTOS_PER_YEAR ? `/galerie/${year}` : undefined;
+      const isTinted = index % 2 === 1;
+
+      return (
+        <PhotoGallery
+          year={year}
+          photos={photos.slice(0, PHOTOS_PER_YEAR)}
+          viewAllHref={viewAllHref}
+          classes={
+            index === 0
+              ? { container: 'pt-0 pb-12 md:pt-0 md:pb-16 lg:pt-0 lg:pb-20 -mt-12 md:-mt-20' }
+              : {
+                  container:
+                    'pt-6 pb-12 md:pt-8 md:pb-16 lg:pt-8 lg:pb-20 -mt-2 md:-mt-4 border-t border-gray-200 dark:border-slate-700',
+                }
+          }
+        >
+          <Fragment slot="bg">
+            <div class:list={['absolute inset-0', { 'bg-blue-50 dark:bg-transparent': isTinted }]} />
+          </Fragment>
+        </PhotoGallery>
+      );
+    })
+  }
+</Layout>
