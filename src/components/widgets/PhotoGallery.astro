@@ -1,0 +1,56 @@
+---
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/ui/Headline.astro';
+import Image from '~/components/common/Image.astro';
+import type { Widget } from '~/types';
+
+export interface PhotoItem {
+  src: string;
+  alt: string;
+}
+
+export interface Props extends Widget {
+  year: string;
+  photos?: Array<PhotoItem>;
+  viewAllHref?: string;
+}
+
+const {
+  year,
+  photos = [],
+  viewAllHref,
+
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+  <Headline tagline={year} classes={{ container: 'max-w-none text-left mb-4 md:mb-6' }} />
+  <div class="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+    {
+      photos.map(({ src, alt }) => (
+        <div class="overflow-hidden rounded-lg">
+          <Image
+            src={src}
+            alt={alt}
+            width={400}
+            height={300}
+            class="w-full h-full object-cover aspect-[4/3] rounded-lg transition hover:scale-105 hover:opacity-90"
+          />
+        </div>
+      ))
+    }
+  </div>
+  {
+    viewAllHref && (
+      <div class="mt-6 text-left">
+        <a href={viewAllHref} class="inline-flex items-center text-primary hover:underline">
+          Voir toutes les photos de {year}
+        </a>
+      </div>
+    )
+  }
+</WidgetWrapper>

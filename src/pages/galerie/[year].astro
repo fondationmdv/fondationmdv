@@ -1,0 +1,54 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Image from '~/components/common/Image.astro';
+import { getCollection } from 'astro:content';
+
+export const getStaticPaths = async () => {
+  const allPhotos = await getCollection('photos');
+  const years = [...new Set(allPhotos.map(({ data }) => data.year))];
+
+  return years.map((year) => ({
+    params: { year },
+    props: {
+      photos: allPhotos.filter(({ data }) => data.year === year).map(({ data }) => ({ src: data.src, alt: data.alt })),
+    },
+  }));
+};
+
+interface Props {
+  photos: Array<{ src: string; alt: string }>;
+}
+
+const { year } = Astro.params;
+const { photos } = Astro.props;
+
+const metadata = {
+  title: `Galerie ${year}`,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero>
+    <Fragment slot="title">Galerie {year}</Fragment>
+    <Fragment slot="subtitle">Toutes les photos de {year}.</Fragment>
+  </Hero>
+
+  <div class="max-w-6xl mx-auto px-4 md:px-6 pb-12 md:pb-20 -mt-16 md:-mt-24">
+    <div class="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+      {
+        photos.map(({ src, alt }) => (
+          <div class="overflow-hidden rounded-lg">
+            <Image
+              src={src}
+              alt={alt}
+              width={400}
+              height={300}
+              class="w-full h-full object-cover aspect-[4/3] rounded-lg transition hover:scale-105 hover:opacity-90"
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Layout>

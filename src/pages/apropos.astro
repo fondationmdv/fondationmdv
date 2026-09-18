@@ -1,0 +1,55 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero tagline="À propos de nous">
+    <Fragment slot="content">
+      La fondation Madeleine-de-Verchères est <u>un organisme à but non lucratif</u> créé en février 2015 par des parents
+      bénévoles de l’OPP de l'école Madeleine-de-Verchères(Organisme de participation des parents).
+      <br /><br />
+      <u>Sa mission est de soutenir le projet éducatif de l'école</u> en offrant aux élèves un environnement inclusif, stimulant,
+      équitable et enrichissant notamment par l'achat et la réparation de matériel ou par le financement d'activités culturelles,
+      sportives, artistiques ou éducatives.
+    </Fragment>
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="L'équipe derrière la fondation!"
+    classes={{ container: 'pt-0 pb-12 md:pt-0 md:pb-16 lg:pt-0 lg:pb-20 -mt-2 md:-mt-4' }}
+    items={[
+      {
+        title: 'Catherine',
+        description:
+          "Donnez-lui du chaos, et elle vous ressort un plan d'action nickel avant la pause café. Leadership, organisation et collaboration, Catherine est d'une efficacité redoutable!",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Mathieu',
+        description:
+          "Demandez-lui une idée, il vous en donnera dix de plus, gratuitement. Le cerveau qui ne s'arrête jamais, une vraie machine.",
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Valérian',
+        description:
+          "Parle couramment le Java, boit trop de café, est connecté même la nuit. Si le site ne fonctionne plus, c'est qu'il s'est endormi...",
+        icon: 'flat-color-icons:approval',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+</Layout>

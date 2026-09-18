@@ -10,19 +10,22 @@ export const headerData = {
       text: 'Don',
       href: getPermalink('/don'),
     },
-    // {
-    //   text: 'Vente de sapins!',
-    //   href: getPermalink('/boutique'),
-    // },
-
-    // {
-    //   text: 'Photos',
-    //   href: getPermalink('/gallerie'),
-    // },
-    // {
-    //   text: 'Documents',
-    //   href: getPermalink('/docs'),
-    // },
+/*    {
+      text: 'Vente de sapins!',
+      href: getPermalink('/boutique'),
+    },
+    {
+      text: 'Photos',
+      href: getPermalink('/galerie'),
+    },
+    {
+      text: 'Documents',
+      href: getPermalink('/docs'),
+    },
+    {
+      text: 'À propos',
+      href: getPermalink('/apropos'),
+    },*/
   ],
 };
 
