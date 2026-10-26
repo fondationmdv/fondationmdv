@@ -15,7 +15,7 @@ export const headerData = {
       href: getPermalink('/boutique'),
     },
     {
-      text: 'Vente M. Rafael',
+      text: 'Vente M. Rafael!',
       href: 'https://monsieurrafael.com/fr/soutenir-une-campagne/MDV-2026/',
       target: '_blank',
     },
