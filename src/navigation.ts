@@ -11,18 +11,14 @@ export const headerData = {
       href: getPermalink('/don'),
     },
     {
-      text: 'Vente de café!',
+      text: 'Vente de sapins!',
       href: getPermalink('/boutique'),
     },
-
-    // {
-    //   text: 'Photos',
-    //   href: getPermalink('/gallerie'),
-    // },
-    // {
-    //   text: 'Documents',
-    //   href: getPermalink('/docs'),
-    // },
+    {
+      text: 'Vente M. Rafael',
+      href: 'https://monsieurrafael.com/fr/soutenir-une-campagne/MDV-2026/',
+      target: '_blank',
+    },
   ],
 };
 
@@ -85,6 +81,6 @@ export const footerData = {
     // { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
   footNote: `
-    Construit avec ❤️ par <a class="text-blue-600 underline dark:text-muted" href="https://github.com/julbrs">julbrs</a> avec <a class="text-blue-600 underline dark:text-muted" href="https://astro.build">Astro</a> et le thème <a class="text-blue-600 underline dark:text-muted" href="https://github.com/onwidget/astrowind">AstroWind</a>.
+    Construit avec ❤️ par <a class="text-blue-600 underline dark:text-muted" href="https://github.com/julbrs">la fondation MDV</a> avec <a class="text-blue-600 underline dark:text-muted" href="https://astro.build">Astro</a> et le thème <a class="text-blue-600 underline dark:text-muted" href="https://github.com/onwidget/astrowind">AstroWind</a>.
   `,
 };
